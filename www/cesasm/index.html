@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="../code.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cesno - Assembly</title>
+</head>
+
+<body>
+    <h1>Test</h1>
+    <h2>Cesno Asm</h2>
+    <h3>Simplified Operator</h3>
+    <p>
+        For example,<br>
+        mov ax, bx == ax = bx<br>
+        add ax, bx == ax + bx<br>
+        mov ax, 0; mov bx, 0; mov cx, 0; mov dx, 0 == rst x<br>
+        mov bx, 0000; mov ax, [bx] == mov sc, [0]
+    </p>
+    <h3>Safe pop</h3>
+    <p>
+        pop ax; mov [si-2], 0; mov [si-1], 0 == pops ax
+    </p>
+    <h2>Example</h2>
+    <div class="code">
+        <dcl->#<keywd->type</keywd->
+        </dcl->
+        <dcl-c>cesasm</dcl-c><br /><br />
+        <var->ax</var->
+        <oprt->=</oprt->
+        <num->2</num-><br>
+        <var->ax</var->
+        <oprt->=</oprt->
+        <var->bx</var-><br>
+        <func->pshs</func->&Tab;<var->ax</var->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+p           {font-size: 14px;}
+div.code    {font-size: 14px; color: #91b3e0; margin-left: 2.25em;}
+span.code   {color: #91b3e0;}
+
+keywd-      {color: #bc64a4; font-weight: bold;}    /* Keyword */
+var-        {color: #f6ad49}                        /* Variable */
+type-       {color: #9ed44c; font-weight: bold;}    /* Data type */
+num-        {color: #e95295}                        /* Number */
+num-16      {color: #00a2ed}
+oprt-       {color: #9790a4; font-weight: bold;}    /* Operator */
+func-       {color: #2ca9e1}                        /* Function */
+arg-        {color: #fab27b}                        /* Argument */
+mdf-        {color: #68be8d; font-weight: bold;}    /* Modifier */
+cmt-        {color: #d1c7b7}                        /* Comment */
+dcl-        {color: #9790a4; font-weight: bold;}    /* # Declare */
+dcl-c       {color: #c4a3bf; font-weight: bold;}    /* Content of # Declare */

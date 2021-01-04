@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="../code.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cesno</title>
+</head>
+
+<body>
+    <h1>Cesno</h1>
+    <div class="code">
+        <dcl->#<keywd->type</keywd->
+        </dcl->
+        <dcl-c>cesno</dcl-c><br /><br />
+        <ent->entity</ent->
+        <type->tool_rgb</type->() <br />
+        {
+        <div class="code">
+            <type->int</type->
+            <var->func</var->
+            <oprt->=</oprt->
+            <num->0</num->; <br />
+            <cmd->define</cmd->
+            <var-p>pale</var-p>
+            <oprt->as</oprt->&nbsp;
+            <var->func</var->
+            <oprt->=</oprt->
+            <num->1</num->; <br />
+            <cmd->define</cmd->
+            <var-p>dark</var-p>
+            <oprt->as</oprt-> {<var->func</var->
+            <oprt->=</oprt->
+            <num->2</num->;} <br />
+        </div>
+        } <br />
+        <ent->entity</ent->
+        <type->colour_rgb</type->(<type->int</type->
+        <var->r</var->, <type->int</type->
+        <var->g</var->, <type->int</type->
+        <var->b</var->)<br />
+        { <br />
+        <div class="code">
+            <var->r</var->, <var->g</var->, <var->b</var->
+            <oprt->=</oprt->
+            <num->0</num->; <br />
+            <cmd->range</cmd->&nbsp;
+            <var->r</var->, <var->g</var->, <var->b</var->
+            <oprt->at</oprt->
+            [<num->0</num->
+            <oprt->:</oprt->
+            <num->256</num->]; <br />
+            <cmd->define</cmd->
+            <var-p>red</var-p>&nbsp;&nbsp;&nbsp;&nbsp;
+            <oprt->as</oprt-> {<var->r</var->
+            <oprt->=</oprt->
+            <num->255</num->; <var->g</var->
+            <oprt->=</oprt->
+            <num->0</num->; <var->b</var->
+            <oprt->=</oprt->
+            <num->0</num->} <br />
+            <cmd->define</cmd->
+            <var-p>green</var-p>&nbsp;&nbsp;
+            <oprt->as</oprt-> {<var->r</var->
+            <oprt->=</oprt->
+            <num->0</num->; <var->g</var->
+            <oprt->=</oprt->
+            <num->255</num->; <var->b</var->
+            <oprt->=</oprt->
+            <num->0</num->} <br />
+            <cmd->define</cmd->
+            <var-p>yellow</var-p>&nbsp;
+            <oprt->as</oprt-> {<var->r</var->
+            <oprt->=</oprt->
+            <num->0</num->; <var->g</var->
+            <oprt->=</oprt->
+            <num->255</num->; <var->b</var->
+            <oprt->=</oprt->
+            <num->255</num->} <br />
+            <ent->react</ent->
+            <type->colour_rgb</type->(<var->r1</var->, <var->g1</var->, <var->b1</var->) <br />
+            {
+            <div class="code">
+                <var->r</var->, <var->r1</var->
+                <oprt->=</oprt->
+                <var->r</var->
+                <oprt->+</oprt->
+                <var->r1</var->; <br />
+                <var->g</var->, <var->g1</var->
+                <oprt->=</oprt->
+                <var->g</var->
+                <oprt->+</oprt->
+                <var->g1</var->; <br />
+                <var->b</var->, <var->b1</var->
+                <oprt->=</oprt->
+                <var->b</var->
+                <oprt->+</oprt->
+                <var->b1</var->; <br />
+            </div>
+            } <br />
+            <ent->react</ent->
+            <type->tool_rgb</type->() <br />
+            {
+            <div class="code">
+                <keywd->if</keywd->
+                (<var-p>pale</var-p>) <br />
+                {
+                <div class="code">
+                    <var->r</var->, <var->g</var->, <var->b</var->
+                    <oprt->*=</oprt->
+                    <num->0.9</num->; <br />
+                </div>
+                } <br />
+                <keywd->elif</keywd->
+                (<var-p>dark</var-p>) <br />
+                {
+                <div class="code">
+                    <var->r</var->, <var->g</var->, <var->b</var->
+                    <oprt->*=</oprt->
+                    <num->1.1</num->; <br />
+                </div>
+                } <br />
+            </div>
+            } <br />
+            <func-d>function</func-d>
+            <type->void</type->
+            <func->print_rgb</func->(<var-p>self</var-p>) <br />
+            {
+            <div class="code">
+                <func->print</func->(<var-p>self</var-p>);
+            </div>
+            }
+        </div>
+        } <br /><br />
+        <type->colour_rgb</type->
+        <var->A</var->
+        <oprt->=</oprt->
+        <var-p>red</var-p>; <br />
+        <type->colour_rgb</type->
+        <var->B</var->
+        <oprt->=</oprt->
+        <var-p>green</var-p>; <br />
+        <type->colour_rgb</type->
+        <var->C</var->
+        <oprt->=</oprt->
+        <num->
+            <num-16>0x</num-16>00<span class="code">,</span>
+        </num->
+        <num->
+            <num-16>0x</num-16>00<span class="code">,</span>
+        </num->
+        <num->
+            <num-16>0x</num-16>ff<span class="code">;</span>
+        </num-> <br /><br />
+        <var->A</var->
+        <oprt->~</oprt->
+        <var->B</var->; <cmt->// A reacts with B.</cmt->
+        <br />
+        <var->A</var->
+        <oprt->~</oprt->
+        <var->C</var->; <cmt->// A reacts with C.</cmt->
+        <br /><br />
+        <func->print</func->(<var->B</var->); <br />
+        <func->print</func->(<var->C</var->); <br />
+
+    </div>
+</body>
+
+</html>

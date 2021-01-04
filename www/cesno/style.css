@@ -1,0 +1,5 @@
+ent-        {color: #82ae46; font-weight: bold;}    /* Entity */
+
+cmd-        {color: #cf747b; font-weight: bold;}    /* Command */
+var-p       {color: #c7b370}
+func-d      {color: #0094c8; font-weight: bold;}    /* Define function keyword*/
