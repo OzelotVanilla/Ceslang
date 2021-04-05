@@ -1,0 +1,30 @@
+# Manage the kanban automatically
+# Thanks idea from: zenn-dev: https://github.com/zenn-dev/zenn-community/blob/master/.github/workflows/issue-to-project.yml
+
+name: bot_kanban_mgr
+
+# Every time the issue is created
+on:
+    issue_comment: 
+        types: [created]
+
+jobs:
+    # Move the issue to project
+    kanban_add_new:
+        runs-on: ubuntu-latest
+        name: Kanban add new issue
+        steps:
+        - name: Add to issues
+          uses: srggrs/assign-one-project-github-action@1.2.1
+          if: github.event.action == 'opened'
+          with:
+            project: 'https://github.com/OzelotVanilla/Cesno/projects/1'
+            column_name: '💬 Issues'
+        
+        - name: Add to considering # If bugs appeared
+          uses: srggrs/assign-one-project-github-action@1.2.1
+          if: |
+             contains(github.event.issue.labels.*.name, 'issue: bug')
+          with:
+            project: 'https://github.com/OzelotVanilla/Cesno/projects/1'
+            column_name: '⚠ Considering'
