@@ -5,8 +5,11 @@ name: bot_kanban_mgr
 
 # Every time the issue is created
 on:
-    issue_comment: 
-        types: [created]
+    issues: 
+        types: [opened, labeled]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
     # Move the issue to project
