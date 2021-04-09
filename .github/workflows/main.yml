@@ -31,3 +31,10 @@ jobs:
           with:
             project: 'https://github.com/OzelotVanilla/Cesno/projects/1'
             column_name: '⚠ Considering'
+        
+        - name: Move to done
+          uses: srggrs/assign-one-project-github-action@1.2.1
+          if: github.event.action == 'closed'
+          with:
+            project: 'https://github.com/OzelotVanilla/Cesno/projects/1'
+            column_name: '✅ Done'
