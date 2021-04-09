@@ -8,6 +8,8 @@
   - [Convention of naming](#convention-of-naming)
 - [Value](#value)
   - [Type](#type)
+  - [Assign](#assign)
+- [Operator](#operator)
 
 Variable
 =======================================
@@ -15,8 +17,9 @@ Variable
 Properties
 ----------
 
-* Strongly typed
-* Allows both staticly and dynamicly typed
+* Strongly typed, statically typed
+* Dynamicly typed acceptable, based on staticly typed
+* Can set scope ()
 * Can be `const` (once init, cannot change)
 
 Rule of naming
@@ -37,5 +40,24 @@ Value
 Type
 ----
 
+Already defined (**e** for extendable):
+
 * primitive type: `bit`, `byte`
-* numbers: `int`, `deci`, `num`, `short`, `long`
+* numbers: `int`, `deci`, `alge`
+  * `int` (**e**): 
+  * 
+* letters: `char`, `string`
+* code object: `func`,`seg`
+
+Assign
+------
+
+* type with name: init entity with null value.
+  For primitives, just extern.
+* type, name, value: init and assign
+
+
+Operator
+=======================================
+
+* Able to create operator because it is a code object
