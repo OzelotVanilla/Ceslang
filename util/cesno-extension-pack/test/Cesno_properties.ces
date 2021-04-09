@@ -1,0 +1,54 @@
+entity Graph3D
+{
+    property status 
+    {
+        raw; modified;
+        needSave:   {unsaved};
+        needRepair: {broken; ^err}
+    };
+
+  ! property err = System.stderr.toDict();
+    private Data data;
+
+    public function void saveTo(File file)
+    {
+        property a {overwrite, newfile};
+        if   (status is needSave)   {file.writeFile(self.data);}
+        elif (status is needRepair) { /* Do something */ }
+    }
+}
+
+entity File
+{
+    property exist {0: false; 1: true};
+
+    Data data;
+    FilePath path;
+
+    public init()
+    {
+        System.IO.
+    }
+
+    with System.IO.file
+    {
+    public void writeFile()
+    {
+        self.writeFile(self.data)
+    }
+    public void writeFile(Data data)
+    {
+        self.data = data;
+        write(self.path);
+    }
+    }
+}
+
+entity FilePath
+{
+    property type {dir; file};
+    
+    private Hierch data;
+    volatile string info = self.data.toString(); // Always refresh when called
+    data.saveTo(dir, a=overwrite)
+}

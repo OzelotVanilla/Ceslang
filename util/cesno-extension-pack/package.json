@@ -1,0 +1,25 @@
+{
+    "name": "cesno-extention-pack",
+    "displayName": "Cesno Extension Pack",
+    "description": "The extention pack of programming language Cesno.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cesno",
+            "aliases": ["Cesno", "cesno"],
+            "extensions": [".ces",".cesno"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cesno",
+            "scopeName": "source.cesno",
+            "path": "./syntaxes/cesno.tmLanguage.json"
+        }]
+    }
+}

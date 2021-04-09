@@ -1,0 +1,452 @@
+{
+    "workbench.colorTheme": "Quiet Light",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "[Quiet Light]": {
+            "rules": {
+                "label": {
+                    "foreground": "#028760",
+                    "fontStyle": "bold"
+                },
+                "property": {
+                    "foreground": "#D9A62E",
+                    "fontStyle": ""
+                },
+                "class": "#1E50A2",
+                "typeParameter": "#9ed44c",
+                "variable": {
+                    "fontStyle": ""
+                },
+                "parameter": {
+                    "fontStyle": ""
+                }
+            }
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Quiet Light]": {
+            "comments": {
+                "fontStyle": "",
+                "foreground": "#B3ADA0"
+            },
+            "keywords": {
+                "foreground": "#bc64a4",
+                "fontStyle": "bold"
+            },
+            "strings": "#98623c",
+            "types": "#9ed44c",
+            "numbers": "#e95295",
+            "textMateRules": [
+                {
+                    "name": "Keywords",
+                    "scope": "keyword.other.using.directive.cpp, keyword.other.typedef.cpp, keyword",
+                    "settings": {
+                        "foreground": "#bc64a4",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "True and False and NULL and nullptr",
+                    "scope": "constant.language.true.cpp, constant.language.false.cpp, constant.language.NULL.cpp, constant.language.nullptr.cpp, constant.language.python, constant.language.boolean.true.js, constant.language.boolean.false.js",
+                    "settings": {
+                        "foreground": "#c5c56a",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "HTML: Attribute",
+                    "scope": [
+                        "meta.tag entity.other.attribute-name",
+                        "entity.other.attribute-name.html"
+                    ],
+                    "settings": {
+                        "foreground": "#f6ad49"
+                    }
+                },
+                {
+                    "name": "HTML: Tag name",
+                    "scope": [
+                        "entity.name.tag"
+                    ],
+                    "settings": {
+                        "foreground": "#ac88ff"
+                    }
+                },
+                {
+                    "name": "HTML: String",
+                    "scope": "string.quoted.double.html, punctuation.definition.string.begin.html, punctuation.definition.string.end.html",
+                    "settings": {
+                        "fontStyle": "",
+                        "foreground": "#7fb80e"
+                    }
+                },
+                {
+                    "name": "HTML Plain Text",
+                    "scope": "text.html.derivative",
+                    "settings": {
+                        "foreground": "#6b6f59"
+                    }
+                },
+                {
+                    "name": "Operators",
+                    "scope": "keyword.operator, entity.name.function.operator",
+                    "settings": {
+                        "foreground": "#a59aca",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "Variable",
+                    "scope": "variable, support.variable, meta.method.body.java, meta.method-call.java",
+                    "settings": {
+                        "foreground": "#f39800"
+                    }
+                },
+                {
+                    "name": "Escape (\\ Special Char)",
+                    "scope": "constant.character.escape",
+                    "settings": {
+                        "foreground": "#92b5a9"
+                    }
+                },
+                {
+                    "name": "CSS Property Name",
+                    "scope": "support.type.property-name.css",
+                    "settings": {
+                        "foreground": "#ff69b4"
+                    }
+                },
+                {
+                    "name": "CSS Property Value",
+                    "scope": "meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css",
+                    "settings": {
+                        "foreground": "#00a2ed"
+                    }
+                },
+                {
+                    "name": "CSS Selector Ele",
+                    "scope": "entity.name.tag.css",
+                    "settings": {
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "CSS Selector Class",
+                    "scope": "entity.other.attribute-name.class.css",
+                    "settings": {
+                        "foreground": "#f69c9f",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "CSS Color Constant",
+                    "scope": "support.constant.color.w3c-extended-color-name.css, support.constant.color.w3c-standard-color-name.css, constant.other.color.rgb-value.hex.css",
+                    "settings": {
+                        "foreground": "#e6b422"
+                    }
+                },
+                {
+                    "name": "CSS Pseudo Class",
+                    "scope": "entity.other.attribute-name.pseudo-class.css",
+                    "settings": {
+                        "foreground": "#cca6bf",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "CSS Sharp Sign",
+                    "scope": "punctuation.definition.entity.css, punctuation.definition.constant.css",
+                    "settings": {
+                        "foreground": "#e198b4"
+                    }
+                },
+                {
+                    "name": "CSS Defined ID",
+                    "scope": "entity.other.attribute-name.id.css, punctuation.definition.entity.css",
+                    "settings": {
+                        "foreground": "#e95295",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "Python Attr Func",
+                    "scope": "meta.function-call.python",
+                    "settings": {
+                        "foreground": "#89c3eb"
+                    }
+                },
+                {
+                    "name": "Python Class Item",
+                    "scope": "meta.item-access.python",
+                    "settings": {
+                        "foreground": "#f58220"
+                    }
+                },
+                {
+                    "name": "Python Class Name",
+                    "scope": "entity.name.type.class.python",
+                    "settings": {
+                        "foreground": "#50a06e",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "Python Inherited Class",
+                    "scope": "entity.other.inherited-class",
+                    "settings": {
+                        "foreground": "#26610F",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "Python Class Item Arg",
+                    "scope": "meta.item-access.arguments.python",
+                    "settings": {
+                        "foreground": "#fab27b"
+                    }
+                },
+                {
+                    "name": "Python Pseudo Var",
+                    "scope": "source.python, meta.function-call.arguments.python",
+                    "settings": {
+                        "foreground": "#f6ad49"
+                    }
+                },
+                {
+                    "name": "Python Define & Lambda",
+                    "scope": "storage.type.function.python",
+                    "settings": {
+                        "foreground": "#0094c8",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "Python Lambda",
+                    "scope": "storage.type.function.lambda.python",
+                    "settings": {
+                        "foreground": "#00A497",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "Python Constant",
+                    "scope": "constant.other.caps.python",
+                    "settings": {
+                        "foreground": "#c5c56a"
+                    }
+                },
+                {
+                    "name": "C++ Include",
+                    "scope": "string.quoted.other.lt-gt.include.cpp, string.quoted.double.include.cpp",
+                    "settings": {
+                        "foreground": "#c4a3bf"
+                    }
+                },
+                {
+                    "name": "C++ Include Sharp Sign",
+                    "scope": "punctuation.definition.directive.cpp",
+                    "settings": {
+                        "foreground": "#9790a4"
+                    }
+                },
+                {
+                    "name": "Function",
+                    "scope": "entity.name.function, keyword.operator.sizeof.cpp, keyword.operator.typeid.cpp, support.function.builtin.python, support.function",
+                    "settings": {
+                        "foreground": "#2ca9e1",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "name": "Type",
+                    "scope": "storage.type",
+                    "settings": {
+                        "foreground": "#9ed44c",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "C++ \"using namespace\"",
+                    "scope": "storage.type.namespace.directive.cpp",
+                    "settings": {
+                        "foreground": "#98d98e",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "name": "C++ Real Namespace",
+                    "scope": "entity.name.namespace",
+                    "settings": {
+                        "foreground": "#007bbb",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "C++ Cast",
+                    "scope": "keyword.operator.cast",
+                    "settings": {
+                        "foreground": "#84a2d4"
+                    }
+                },
+                {
+                    "name": "C++/Java Modifier(const vola rest)",
+                    "scope": "storage.modifier.specifier.const.cpp, storage.modifier.specifier.volatile.cpp, storage.modifier.specifier.restrict.cpp, storage.modifier.specifier.static.cpp, storage.modifier.java",
+                    "settings": {
+                        "foreground": "#68be8d",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "C++ Func Para Modifier (\"&\" and \"*\")",
+                    "scope": "storage.modifier.reference.cpp, storage.modifier.pointer.cpp",
+                    "settings": {
+                        "foreground": "#a59aca"
+                    }
+                },
+                {
+                    "name": "C++ Struct and Enum",
+                    "scope": "storage.type.struct.cpp, storage.type.enum.cpp, storage.type.struct.declare.cpp, storage.type.enum.declare.cpp",
+                    "settings": {
+                        "foreground": "#82ae46",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "C++ Preprocessor",
+                    "scope": "entity.name.function.preprocessor",
+                    "settings": {
+                        "foreground": "#c5c56a",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "C++ externed",
+                    "scope": "meta.block.extern.cpp",
+                    "settings": {
+                        "foreground": "#9ea1a3"
+                    }
+                },
+                {
+                    "name": "Java Const",
+                    "scope": "constant.language.java",
+                    "settings": {
+                        "foreground": "#b79b5b",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "name": "VBA Source (Not highlighted Text)",
+                    "scope": "source.vba",
+                    "settings": {
+                        "foreground": "#3e62ad"
+                    }
+                },
+                {
+                    "name": "Assembly Psedu Tag",
+                    "scope": "source.asm",
+                    "settings": {
+                        "foreground": "#5D5D74"
+                    }
+                },
+                {
+                    "name": "Assembly Reg General",
+                    "scope": "constant.language.register.general",
+                    "settings": {
+                        "foreground": "#ff9740"
+                    }
+                },
+                {
+                    "name": "Assembly Reg Segment",
+                    "scope": "constant.language.register.segment",
+                    "settings": {
+                        "foreground": "#ffb02a"
+                    }
+                },
+                {
+                    "name": "Self",
+                    "scope": "variable.language.this.java, variable.language.special.self.python",
+                    "settings": {
+                        "foreground": "#cf747b"
+                    }
+                }
+            ]
+        }
+    },
+    "bracket-pair-colorizer-2.colors": [
+        "Goldenrod",
+        "Orchid",
+        "CornFlowerBlue"
+    ],
+    "editor.renderControlCharacters": true,
+    "path-autocomplete.ignoredPrefixes": [
+        "type=\"",
+        "method=\""
+    ],
+    "workbench.iconTheme": "vscode-icons",
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "clang.diagnostic.enable": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "java.home": "E:/Software/Java/",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Microsoft",
+    "git.autofetch": true,
+    "editor.fontFamily": "Consolas, Ubuntu Mono 標準, Microsoft YaHei",
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "java.format.settings.profile": "MyStyle",
+    "java.format.settings.url": "D:/Code/Code test/Java/styles.xml",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "files.associations": {
+        "*.vba": "vba",
+        "*.asm": "assembly",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "pandoc.pdfOptString": "-N -t latex-smart --listings --pdf-engine=xelatex -V papersize=a4 -V ja=standerd -V documentclass=bxjsarticle -V classoption=pandoc -V classoption=jbase=11Q -V classoption=jafont=hiragino-pron",
+    "masmtasm.dosbox.config": {
+        "SDL.windowresolution": "1920x1080",
+        "SDL.output": "opengl"
+    },
+    "latex-workshop.latexindent.path": "latexindent",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.formatting.autopep8Args": [
+        "--max-line-length=120",
+        "--ignore",
+        "E731"
+    ],
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true,
+        "editor.suggest.showWords": true
+    },
+    "markdown.preview.fontSize": 18,
+    "jupyter.jupyterServerType": "local",
+    "jupyter.alwaysTrustNotebooks": true,
+    "java.refactor.renameFromFileExplorer": "autoApply",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    }
+}

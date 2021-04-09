@@ -1,0 +1,86 @@
+// Need to be edited
+
+entity tool_rgb
+{
+    int func = 0;
+    property func{}
+    define pale as  func = 1;
+    define dark as {func = 2;}
+}
+
+entity colour_rgb
+{
+    int r, g, b;
+
+    public init()
+    {
+        r, g, b=0;
+    }
+    
+    public init(int r, int g, int b)
+    {
+        
+    }
+
+    range  r, g, b at [0 : 256];
+    define red     as {r = 255; g = 0; b = 0}
+    define green   as {r = 0; g = 255; b = 0}
+    define yellow  as {r = 0; g = 255; b = 255}
+
+    react colour_rgb(r1, g1, b1)
+    {
+        r, r1 = r + r1;
+        g, g1 = g + g1;
+        b, b1 = b + b1;
+    }
+    react tool_rgb
+    {
+        if (pale)
+        {
+            r, g, b *= 0.9;
+        }
+        elif (dark)
+        {
+            r, g, b *= 1.1;
+        }
+    }
+    
+    function void print_rgb(self)
+    {
+        print(self);
+    }
+}
+
+colour_rgb A = red;
+colour_rgb B = green;
+colour_rgb C = 0x00, 0x00, 0xff;
+
+A ~ B; // A reacts with B.
+A ~ C; // A reacts with C.
+
+print(B);
+print(C);
+
+// assign together
+
+int a, b, c;
+int d, e, f;
+var[] grp = [d, e, f];
+int[] arr = [1, 2, 3];
+int[] xar = [1, 2, 3, 4];
+int[] mar = [1, 2, 3, 4, 5, 6]
+
+for (each x: a, b, c; int y: arr)
+{
+    x = y;
+}
+
+for (x: grp; y: xar; mkSameLen=false)
+{
+    x = y;
+}
+
+for (x: grp; int y=0; y<mar.len; y+=2)
+{
+    x = mar[y];
+}

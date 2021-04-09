@@ -1,0 +1,70 @@
+{
+    "name": "Cesno Light",
+    "type": "light",
+    "colors": {
+        "editor.background": "#f5f5f5",
+        "editor.foreground": "#333333"
+    },
+    "tokenColors": [
+        {
+            "name": "Cesno Keyword Control",
+            "scope": "keyword.control.cesno",
+            "settings": {
+                "foreground": "#bc64a4",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Cesno Data Type",
+            "scope": "keyword.datatype.cesno",
+            "settings": {
+                "foreground": "#9ed44c",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Cesno Keyword Modifier",
+            "scope": "keyword.modifier.cesno",
+            "settings": {
+                "foreground": "#00a497",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Cesno Keyword Object Declare",
+            "scope": "keyword.object.declare.cesno",
+            "settings": {
+                "foreground": "#68be8d",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Cesno Comment",
+            "scope": "comment.cesno",
+            "settings": {
+                "foreground": "#b3ada0"
+            }
+        },
+        {
+            "name": "Cesno String",
+            "scope": "string.cesno",
+            "settings": {
+                "foreground": "#98623c"
+            }
+        },
+        {
+            "name": "Cesno Identifier Property Name",
+            "scope": "identifier.property.name.cesno",
+            "settings": {
+                "foreground": "#928c36"
+            }
+        },
+        {
+            "name": "Cesno Object Level Pointer",
+            "scope": "keyword.object.levelptr.cesno",
+            "settings": {
+                "foreground": "#cf747b"
+            }
+        }
+    ]
+}

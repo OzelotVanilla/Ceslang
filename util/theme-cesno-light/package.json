@@ -1,0 +1,21 @@
+{
+    "name": "theme-cesno-light",
+    "displayName": "Cesno Light",
+    "description": "A light theme for Cesno.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Cesno Light",
+                "uiTheme": "vs",
+                "path": "./themes/Cesno Light-color-theme.json"
+            }
+        ]
+    }
+}

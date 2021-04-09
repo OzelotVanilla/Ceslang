@@ -1,0 +1,91 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Cesno",
+    "fileTypes": [
+        "cesno"
+    ],
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#identifier"
+        },
+        {
+            "patterns": [
+                {
+                    "name": "identifier.property.name.cesno",
+                    "match": "(?<=\\bproperty\\s)\\w*"
+                }
+            ]
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.cesno",
+                    "match": "\\b(if|elif|else|while|for|switch|break|with)\\b"
+                },
+                {
+                    "name": "keyword.modifier.cesno",
+                    "match": "\\b(public|private|protected|volatile|readonly)\\b"
+                },
+                {
+                    "name": "keyword.datatype.cesno",
+                    "match": "\\b(void|var|int|deci|numer|char|string)\\b"
+                },
+                {
+                    "comment": "Start of Object inside keyword",
+                    "name": "keyword.object.declare.cesno",
+                    "match": "\\b(entity|function|method|property)\\b"
+                },
+                {
+                    "name": "keyword.object.levelptr.cesno",
+                    "match": "\\b(self|super)\\b"
+                },
+                {
+                    "name": "keyword.object.declare.function.cesno",
+                    "match": "\\bfunction\\b"
+                },
+                {
+                    "name": "keyword.object.declare.method.cesno",
+                    "match": "\\bmethod\\b"
+                },
+                {
+                    "name": "keyword.object.declare.property.cesno",
+                    "match": "\\bproperty\\b"
+                },
+                {
+                    "name": "identifier.property.name.cesno",
+                    "match": "(?<=\\bproperty\\s)\\w*"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.cesno",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.cesno",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "include": "#comments"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.cesno"
+}
