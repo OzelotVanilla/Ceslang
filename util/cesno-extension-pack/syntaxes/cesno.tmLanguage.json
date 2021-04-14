@@ -31,7 +31,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.cesno",
-                    "match": "\\b(if|elif|else|while|for|switch|break|with)\\b"
+                    "match": "\\b(if|elif|else|while|for|switch|break|with|return|eval|pass)\\b"
                 },
                 {
                     "name": "keyword.modifier.cesno",
@@ -41,6 +41,11 @@
                     "name": "keyword.datatype.cesno",
                     "match": "\\b(void|var|int|deci|numer|char|string)\\b"
                 },
+                {
+                    "name": "keyword.memory.cesno",
+                    "match": "\\b(alloc|clear|new|del)"
+                },
+
                 {
                     "comment": "Start of Object inside keyword",
                     "name": "keyword.object.declare.cesno",

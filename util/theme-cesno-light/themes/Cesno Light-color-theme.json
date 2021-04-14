@@ -23,6 +23,14 @@
             }
         },
         {
+            "name": "Cesno Memory Action",
+            "scope": "keyword.memory.cesno",
+            "settings": {
+                "foreground": "#c97586",
+                "fontStyle": "bold"
+            }
+        },
+        {
             "name": "Cesno Keyword Modifier",
             "scope": "keyword.modifier.cesno",
             "settings": {

@@ -33,6 +33,7 @@ entity colour_rgb
         g, g1 = g + g1;
         b, b1 = b + b1;
     }
+
     react tool_rgb
     {
         if (pale)
@@ -44,6 +45,7 @@ entity colour_rgb
             r, g, b *= 1.1;
         }
     }
+    
     
     function void print_rgb(self)
     {
@@ -84,3 +86,43 @@ for (x: grp; int y=0; y<mar.len; y+=2)
 {
     x = mar[y];
 }
+
+// Array which has boundary and which not has
+
+int[] x = [5, 7, 10];
+
+action __modifier_public(type t)
+{
+
+}
+
+type Ensemble canbe Addable
+{
+    MathObj[] value;
+
+    object left_oprn  = self.value;
+    object right_oprn = self.value; // Send self as a left or right operand
+
+    action __operator_add(self, Ensemble r)
+    {
+        MathObj[] ret = alloc MathObj[self.value.length];
+        for (x : self.value)
+        {
+            ret.push(x) if x not in r.value else pass;
+        }
+        return eval<l, r> ret;
+    }
+}
+
+action __operator_add(LeftOprn l, RightOprn r)
+{
+    return eval<l, r> lang.cesasm.adds(l, r) if (type(l, r) in lang.cesno.Number);
+}
+
+action __operator_incr(LeftOprn l) // For operator increment x++
+{
+    return eval<l> lang.cesasm.inc(l);
+}
+
+// Multiple times described type (like `Fruit Orange good_orange`)
+// It will be useful when overloading
