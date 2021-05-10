@@ -43,7 +43,7 @@
                 },
                 {
                     "name": "keyword.memory.cesno",
-                    "match": "\\b(alloc|clear|new|del)"
+                    "match": "\\b(alloc|clear|new|del)\\b"
                 },
 
                 {

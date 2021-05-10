@@ -1,0 +1,15 @@
+/**
+ * 
+ * Type <code>int</code>:
+ * Used to save integer numbers.
+ *
+ * Note: This is one basic type of Cesno, be careful if you want to modify something.
+ *
+ */
+
+package type;
+
+type int
+{
+    alloc value;
+}

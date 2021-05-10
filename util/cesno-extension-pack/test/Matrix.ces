@@ -4,8 +4,9 @@
 //Cesno keeps generics values to runtime. It means you can create generics objects and generics arrays anywhere. That's amazing.
 //Generics is the VALUEs in the "<>" and they are limited by the logic expression typed array.
 //The generics value must make all elements of the array appears true.
-public class Matrix <L, H> : [Int.isInstance(L) && L >= 0, Int.isInstance(H) && H >= 0] {
 
+public class Matrix <L, H> : [Int.isInstance(L) && L >= 0, Int.isInstance(H) && H >= 0]
+{
     public constructor(Array<Array<Double, H>, L> data);//This is just a demo, so I don't implement it.
 
     //It is a good habit to put each generics value's expressions to one element but you don't need to always do that.

@@ -52,3 +52,16 @@ entity FilePath
     volatile string info = self.data.toString(); // Always refresh when called
     data.saveTo(dir, a=overwrite)
 }
+
+entity CrudeString
+{
+    property length = self.value.length;
+
+    private char[] value;
+}
+
+print(s1.length)
+
+add(a,b)
+
+add(b=3,a=4)
