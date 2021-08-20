@@ -1,1 +1,2 @@
-body       {font-family: Consolas, monospace; text-decoration: none}
+*          {font-family: Consolas, monospace; text-decoration: none;
+            margin: 0px;}

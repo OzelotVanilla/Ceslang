@@ -1,7 +1,9 @@
 /**
- * 
+ *
  * Type <code>int</code>:
  * Used to save integer numbers.
+ *
+ * All <code>int</code> object will become primitive type after compilation
  *
  * Note: This is one basic type of Cesno, be careful if you want to modify something.
  *
@@ -9,7 +11,60 @@
 
 package type;
 
-type int
+// Operatable is an interface which allow users to define & use operators like +, -, *, /.
+type int whichis Operatable, Decimal
 {
-    alloc value;
+    cesasm_int bit_data;
+
+    oprt plus(left, right)
+    {
+        eval left.add(right);
+    }
+
+    oprt minus(left, right)
+    {
+        eval left.sub(right);
+    }
+
+    oprt multiply(left, right)
+    {
+        eval left.mul(right);
+    }
+
+    oprt divide(left, right)
+    {
+        eval left.div(right);
+    }
+
+    oprt plusDoubleLeft(oprd), plusDoubleRight(oprd)
+    {
+        eval oprd.add(1);
+    }
+
+    oprt minusDoubleLeft(oprd), minusDoubleRight(oprd)
+    {
+        eval oprd.sub(1);
+    }
+
+    func add(self, other)
+    {
+        // CesAsm only allows data which type is operatable by itself.
+        // When write CesAsm in Cesno, all type must be something start with "cesasm_".
+        eval codeseg cesasm { self.bit_data + other.bit_data };
+    }
+
+    func sub(self, other)
+    {
+        eval codeseg cesasm { self.bit_data - other.bit_data };
+    }
+
+    func mul(self, other)
+    {
+        eval codeseg cesasm { self.bit_data * other.bit_data };
+    }
+
+    func div(self, other)
+    {
+        eval codeseg cesasm { self.bit_data / other.bit_data };
+    }
 }
